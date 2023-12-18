@@ -5,6 +5,7 @@ package daw;
 
 import java.util.Arrays;
 import java.util.Random;
+import java.util.Scanner;
 
 /**
  *
@@ -16,7 +17,7 @@ public class Ej1 {
 
     public static void main(String[] args) {
         
-        
+        Scanner teclado = new Scanner(System.in);
         
         //Ej1
 
@@ -69,8 +70,10 @@ public class Ej1 {
         
         //Pregunta al usuario por un elemento a buscar en el array ordenado. 
         //Usa búsqueda binaria para obtener la posición donde está el elemento.
-        System.out.println("Introduce un número a buscar");
-        
+        System.out.println("Introduce un número a buscar entre 10 y 100");
+        int num = teclado.nextInt();
+        int resultadoBusqueda = Arrays.binarySearch(arrayInt, num);
+        System.out.println("Posición de la búsqueda: " + resultadoBusqueda);
         
     }
 
